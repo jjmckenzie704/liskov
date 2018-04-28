@@ -1,0 +1,56 @@
+body {
+  background: black;
+}
+
+/* Ganim begins */
+/***************/
+
+.canvas-interactive-wrapper {
+  position: relative;
+  height: 400px;
+  text-align: center;
+  
+}
+
+.canvas-interactive-wrapper canvas {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 5px solid white;
+  border-radius: 3px;
+}
+
+.canvas-interactive-wrapper .cta-wrapper {
+  margin-top: 120px;
+}
+
+.canvas-interactive-wrapper .cta-wrapper a {
+  position: relative;
+  display: inline-block;
+  padding: 3px 7px;
+  margin-right: 50px;
+  z-index: 1;
+  text-decoration: none;
+  color: #222;
+  transition: border .3s;
+}
+
+.canvas-interactive-wrapper .cta-wrapper a.active {
+  border-color: #222;
+}
+
+#default-state-cta {
+  font-size: 80px;
+  padding: 100px;
+  font-family: 'Titan One', cursive;
+  color: black;
+}
+
+/* Ganim Ends */
+/***************/
+
