@@ -1,4 +1,5 @@
 
+ 
  //GAMIN BEGINS//
 var granimInstance = new Granim({
   element: '#canvas-interactive',
@@ -32,8 +33,8 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-$(document).ready(function(){
 
+$(document).ready(function(){
   $(".signin").click(function(){
     $("#modal-singin").modal();
     
