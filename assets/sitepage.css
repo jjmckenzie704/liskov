@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.jain-container .navbar {
+    position: absolute;
+    top:0;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-nav.nav li a{
+    color: #fff;
+    font-size: 18px;
+
+}
+
+/* #box1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/Images/modernJukebox.png);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    opacity: 0.7;
+    
+} */
+
+/* /* #box2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/Images/steampunk_rock.jpg);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    opacity: 0.7;
+} */
+
+#box1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/Images/musicmind.png);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    opacity: 0.7;
+} 
+
+#box2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/Images/musicmind.png);
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    opacity: 0.7;
+} 
+
+h1 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 60px;
+    font-style: bold;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-shadow: 0 0 20px #ff005b;
+}
+
+h1:after {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 0 20px;
+    z-index: -1;
+    color: #ff005b;
+}
