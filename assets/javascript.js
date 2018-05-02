@@ -1,4 +1,6 @@
-//GAMIN BEGINS//
+
+ 
+ //GAMIN BEGINS//
 var granimInstance = new Granim({
   element: '#canvas-interactive',
   name: 'interactive-gradient',
@@ -12,24 +14,29 @@ var granimInstance = new Granim({
           gradients: [
               ['#B3FFAB', '#12FFF7'],
               ['#ADD100', '#7B920A'],
-              ['#1A2980', '#26D0CE']
+              ['#1A2980', '#26D0CE'],
+              ['#9D50BB', '#6E48AA'],
+              ['#4776E6', '#8E54E9'],
+              ['#FF4E50', '#F9D423']
           ],
           transitionSpeed: 10000
       },
-      "violet-state": {
-          gradients: [
-              ['#9D50BB', '#6E48AA'],
-              ['#4776E6', '#8E54E9']
-          ],
-          transitionSpeed: 2000
-      },
-      "orange-state": {
-          gradients: [ ['#FF4E50', '#F9D423'] ],
-          loop: false
-      }
   }
 });
 //GAMIN ENDS//
 
+// Nav Bar //
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 
+$(document).ready(function(){
+  $(".signin").click(function(){
+    $("#modal-singin").modal();
+    
+  })
+});
