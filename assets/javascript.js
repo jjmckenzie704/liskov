@@ -1,4 +1,5 @@
 
+ 
  //GAMIN BEGINS//
 var granimInstance = new Granim({
   element: '#canvas-interactive',
@@ -33,6 +34,7 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
+<<<<<<< HEAD
 
 // Get the modal
 var modal = document.getElementById('id01');
@@ -62,6 +64,12 @@ var config = {
   usersRef.update({
       email: "karinasolorio11@gmail.com", 
       password: "password"
+=======
+$(document).ready(function(){
+  $(".signin").click(function(){
+    $("#modal-singin").modal();
+    
+>>>>>>> d0b729f233e4055f3709518d8f5813cf4e63bc62
   })
 */
 
