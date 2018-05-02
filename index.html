@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript.js"></script>
     <title>TITLE</title>
 </head>
-<body>    
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Hello, world!</h1>
-            <p>Contents ...</p>
-            <p>
-                <a class="btn btn-primary btn-lg">Learn more</a>
-            </p>
-        </div>
+<body>
+    <div>
+       <div id="login">
+        <h1>First, log in to spotify</h1>
+        <a href="/login">Log in</a>
+       </div>
+       <div id="loggedin">
+       </div>
     </div>
-    <h1>this is the testbranch! it works!!</h1>
-</body>
+   
+    <script id="loggedin-template" type="text/x-handlebars-template">
+       <h1>Logged in as </h1>
+       <img id="avatar" width="200" src="" />
+       <dl>
+        <dt>Display name</dt><dd></dd>
+        <dt>Username</dt><dd></dd>
+        <dt>Email</dt><dd></dd>
+        <dt>Spotify URI</dt><dd><a href=""></a></dd>
+        <dt>Link</dt><dd><a href=""></a></dd>
+        <dt>Profile Image</dt><dd></dd>
+       </dl>
+       <p><a href="/">Log in again</a></p>
+    </script>
+   </body>
 </html>
