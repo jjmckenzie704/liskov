@@ -67,7 +67,7 @@ var config = {
 
 var mainDB = firebase.database().ref();
 
-mainDB.on("value", function(snapshot) {
+usersRef.once("value").then(function(snapshot) {
     console.log(snapshot.val());
 })
 
