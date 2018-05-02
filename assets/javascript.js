@@ -18,7 +18,7 @@ var granimInstance = new Granim({
               ['#4776E6', '#8E54E9'],
               ['#FF4E50', '#F9D423']
           ],
-          transitionSpeed: 10000
+          transitionSpeed: 5000
       },
   }
 });
@@ -32,10 +32,43 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-$(document).ready(function(){
 
-  $(".signin").click(function(){
-    $("#modal-singin").modal();
-    
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyDK5bKY5Pqm0_gg_mbnOo6UPmIQHbaZNC4",
+    authDomain: "project1-f4f3e.firebaseapp.com",
+    databaseURL: "https://project1-f4f3e.firebaseio.com",
+    projectId: "project1-f4f3e",
+    storageBucket: "project1-f4f3e.appspot.com",
+    messagingSenderId: "303098997727"
+  };
+  firebase.initializeApp(config);
+
+  var usersRef = firebase.database().ref("/users");
+
+  /*
+  usersRef.update({
+      email: "karinasolorio11@gmail.com", 
+      password: "password"
   })
-});
+*/
+
+var mainDB = firebase.database().ref();
+
+mainDB.on("value", function(snapshot) {
+    console.log(snapshot.val());
+})
+
+  

@@ -9,6 +9,8 @@
         crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <!--iziModal-->
+    <link rel="stylesheet" href="iziModal.min.css">
     <!--granim-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/1.1.0/granim.min.js"></script>
     <!--anime-->
@@ -18,14 +20,22 @@
 </head>
 
 <body>
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Home</a>
-        <a href="#" class="signin">Login</a>
-        <a href="#"class ="signin">Sign Up</a>
-    </div>
-
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+   
+    <div class="nav-section">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                    </li>
+                    <li>
+                        <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Signup</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
 
     <div class="container">
@@ -41,33 +51,58 @@
         </div>
     </div>
 
-    <div class = "modal fade" id = "modal-signin" role="dialog">
-            <div class = "modal-dialog">
-                <div class ="modal-content">
-                    <div class = "modal-header">
-                        <h2 class = "modal-title">Sign In</h2>
-                        <button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-                    </div>
-                    <div class = "modal-body">
-                        <form role = "form">
-                            <div class = "form-group">
-                                <label for = "email">Email</label>
-                                <input type = "email" class= "form-control" placeholder = "Email" id = "email">
-                            </div>
-                            <div class = "form-group">
-                                    <label for = "password">Password</label>
-                                    <input type = "Password" class= "form-control" placeholder = "Password" id = "password">
-                                </div>
-                        </form>
-                    </div>
-                    <div class = "modal-footer">
-                        <button type = "button" class = "btn btn-primary btn-block" id = "modalSignIn">Sign In</button>
-                        <br>
-                        <button type = "button" class = "btn btn-secondary btn-block" id = "createAccount">Create Account</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--Login Page-->
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+       <img src="images/background image.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+     
+    </div>
+
+    <div class="container" >
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+<!--Signup page-->
+<div id="id02" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="images/background image.jpg" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Signup</button>
+           
+          </div>
+      
+          <div class="container">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          </div>
+        </form>
+      </div>
 
 
     <!-- Call the script -->
@@ -77,7 +112,8 @@
     <!--jquery!-->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+  <script src="assets/javascript.js"></script>
 
 
 </body>
