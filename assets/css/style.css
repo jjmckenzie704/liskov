@@ -153,11 +153,11 @@ nav ul li a:hover {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
+
   }
   
   img.avatar {
-    width: 40%;
-    border-radius: 50%;
+    height: 110px;
   }
   
   .container {
