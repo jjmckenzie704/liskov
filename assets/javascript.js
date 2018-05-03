@@ -25,15 +25,6 @@ var granimInstance = new Granim({
 });
 //GAMIN ENDS//
 
-// Nav Bar //
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
 
 // Get the modal
 var modal = document.getElementById('id01');
@@ -46,7 +37,8 @@ window.onclick = function(event) {
 }
 
 
-// Initialize Firebase
+//Initialize Firebase
+
 var config = {
     apiKey: "AIzaSyDK5bKY5Pqm0_gg_mbnOo6UPmIQHbaZNC4",
     authDomain: "project1-f4f3e.firebaseapp.com",
@@ -54,15 +46,112 @@ var config = {
     projectId: "project1-f4f3e",
     storageBucket: "project1-f4f3e.appspot.com",
     messagingSenderId: "303098997727"
-  };
+};
+
   firebase.initializeApp(config);
 
-  var usersRef = firebase.database().ref("/users");
+  var database = firebase.database();
 
-var mainDB = firebase.database().ref();
+  $("#signupbutton").on("click", function(event){
+    event.preventDefault();
 
-usersRef.once("value").then(function(snapshot) {
-    console.log(snapshot.val());
-})
+    var email = '';
+    var password = '';
+
+    var email = $("#signup-email").val().trim();
+    var password = $("#signup-psw").val().trim();
+   
+    console.log(email);
+    console.log(password);
+
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+          errorCode = error.code;
+          errorMessage = error.message;
+        });
+        
+    });    
+
+    $("#loginbutton").on("click", function(event){
+        event.preventDefault();
+    
+        var email = '';
+        var password = '';
+    
+        var email = $("#log-email").val().trim();
+        var password = $("#login-psw").val().trim();
+        
+        console.log(email);
+        console.log(password);  
+
+        //log in 
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(email)
+        });
+    
+    });
+
+
+
+
+
+//   var usersRef = firebase.database().ref("/users");
+
+// var mainDB = firebase.database().ref();
+
+// usersRef.update({
+//     "karina": "password"
+// });
+
+// usersRef.child("mahesh").on("value", function(snapshot) {
+//     console.log(snapshot.val());
+// });
+
+
+//Local Storage 
+
+//store data
+
+// window.onload = function() {
+// if (localStorage) {
+//     document.getElementById("signup").addEventListener('submit', function(){
+//     var username = document.getElementById('susername').value;
+
+//     localStorage.setItem('susername', username);
+//     cosole.log(username);
+//     });
+
+// }
+// }
+
+    //retrieve data 
+
+    // var username = localStorage.getItem('susername');
+    // if (username != "undefined" || username != "null") {
+    //    // document.getElementById('WelcomeMessage').innerHTML =("hello" + username + "!");
+    //     console.log("hello " + username);
+    // }
+    // else {
+       // document.getElementById('Welcome').innerHTML = "hello!"
+    // }
+// localStorage.setItem("username", "");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
