@@ -2,62 +2,8 @@ body {
     margin: 0;
     padding: 0;
 }
-
-.jain-container .navbar {
-    position: absolute;
-    top:0;
-    background-color: transparent;
-    border: none;
-}
-
-.navbar-nav.nav li a{
-    color: #fff;
-    font-size: 18px;
-
-}
-
-/* #box1 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/Images/modernJukebox.png);
-    background-size: cover;
-    display: table;
-    background-attachment: fixed;
-    opacity: 0.7;
-    
-} */
-
-/* /* #box2 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/Images/steampunk_rock.jpg);
-    background-size: cover;
-    display: table;
-    background-attachment: fixed;
-    opacity: 0.7;
-} */
-
-#box1 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/Images/musicmind.png);
-    background-size: cover;
-    display: table;
-    background-attachment: fixed;
-    opacity: 0.7;
-} 
-
-#box2 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/Images/musicmind.png);
-    background-size: cover;
-    display: table;
-    background-attachment: fixed;
-    opacity: 0.7;
-} 
-
-h1 {
+/*neon h1*/
+/* h1 {
     font-family: 'Black Han Sans', sans-serif;
     font-size: 60px;
     font-style: bold;
@@ -76,221 +22,101 @@ h1:after {
     padding: 0 20px;
     z-index: -1;
     color: #ff005b;
+}  */
+
+
+.jain-container .navbar {
+    position: absolute;
+    top:0;
+    background-color: white;
+    border: none;
 }
 
-body {
-    background: white;
-  }
-  
-  /* Ganim begins */
-  /***************/
-  
-  .canvas-interactive-wrapper {
-    position: relative;
-    height: 400px;
+nav ul {
+    width: 600px;
+    margin: 0 auto;
+    /* background-color: rgba(255, 255, 255, 0.5); */
     text-align: center;
-    
+    border-radius: 63px;
   }
-  
-  .canvas-interactive-wrapper canvas {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    border: 5px solid black;
-    border-radius: 25px;
-  }
-  
-  .canvas-interactive-wrapper .cta-wrapper {
-    margin-top: 120px;
-  }
-  
-  .canvas-interactive-wrapper .cta-wrapper a {
-    position: relative;
+  nav ul li {
+    list-style: none;
     display: inline-block;
-    padding: 3px 7px;
-    margin-right: 50px;
-    z-index: 1;
+  }
+  nav ul li a {
+    display: block;
     text-decoration: none;
-    color: #222;
-    transition: border .3s;
+    padding: 40px 60px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #323642;
+    transition: background-color 0.5s ease;
   }
-  
-  .canvas-interactive-wrapper .cta-wrapper a.active {
-    border-color: #222;
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
   }
-  
-  #default-state-cta {
-    font-size: 80px;
-    padding: 100px;
-    font-family: 'Titan One', cursive;
-    color: black;
-  }
-  
-  /* Ganim Ends */
-  /***************/
-  
-  /*Nav Bar*/
 
- .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-  
-  
-  
-  
-/*   
-  
-  
-  
-  
-  
-  
-  
-  .register-background .container {
-    margin-top: 11%;
+.navbar-toggle .icon-bar{
     position: relative;
-    z-index: 3;
-  }
-  
-  
-  .register-card {
-    background-color: #bde6eb;
-    border-radius: 8px;
-    color: #fff;
-    max-width: 350px;
-    margin: 20px 0 70px;
-    min-height: 400px;
-    padding: 30px;
-  }
-  
-  .register-card label {
-    margin-top: 15px;
-  }
-  
-  .register-card .title {
-    color: #fff;
-    text-align: center;
-  }
-  
-  .register-card .btn {
-    margin-top: 30px;
-  }
-  
-  .register-card .forgot {
-    text-align: center;
-  } */
-
-  body {
-    margin: 0;
-    padding: 0;
+    transition: all 500ms ease-in-out;
+    width: 30px;
+    height: 2px;
 }
 
-.jain-container .navbar {
-    position: absolute;
-    top:0;
-    background-color: transparent;
-    border: none;
+.navbar-toggle .icon-bar:nth-of-type(2){
+    top:1px;
 }
-
-.navbar-nav.nav li a{
-    color: #fff;
-    font-size: 18px;
-
+.navbar-toggle .icon-bar:nth-of-type(3){
+    top:2px;
 }
-
-/* #box1 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/Images/modernJukebox.png);
-    background-size: cover;
-    display: table;
-    background-attachment: fixed;
-    opacity: 0.7;
-    
-} */
-
-/* /* #box2 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/Images/steampunk_rock.jpg);
-    background-size: cover;
-    display: table;
-    background-attachment: fixed;
-    opacity: 0.7;
-} */
+.navbar-toggle.active .icon-bar:nth-of-type(1){
+    top:6px;
+    transform: rotate(45deg);
+}
+.navbar-toggle.active .icon-bar:nth-of-type(2){
+    background-color: transparent; 
+}
+.navbar-toggle.active .icon-bar:nth-of-type(3){
+    top:-6px;
+    transform: rotate(-45deg);
+}
 
 #box1 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/Images/musicmind.png);
+    background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     display: table;
-    background-attachment: fixed;
-    opacity: 0.7;
 } 
 
 #box2 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(assets/Images/musicmind.png);
     background-size: cover;
     display: table;
     background-attachment: fixed;
     opacity: 0.7;
 } 
 
-h1 {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 60px;
-    font-style: bold;
-    color: white;
-    margin: 0px;
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    text-shadow: 0 0 20px #ff005b;
+@media only screen and (max-width:768px){
+    .navbar-collapse{
+        position: absolute;
+        top:100%; 
+        right:0%;
+        clip-path: circle(0px at top right);
+        background-color: rgba(0,0,0,0.79);
+        transition: all 500ms ease-in-out;
+        width: 100%;
+    }
+    .collapse {
+        clip-path: circle(150% at top right);
+        border: none;
+    }
+    .navbar-nav.nav li a{
+        margin:10px;
+    }
+    .navbar-toggle{
+        top:-3em; 
+    }
 }
 
-h1:after {
-    position: absolute;
-    top:0;
-    left: 0;
-    padding: 0 20px;
-    z-index: -1;
-    color: #ff005b;
-}
+
+

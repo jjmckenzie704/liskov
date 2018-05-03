@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+    $(".navbar-toggle").on("click", function(){
+        $(this).toggleClass("active")
+    })
+
     var config = {
         apiKey: "AIzaSyDK5bKY5Pqm0_gg_mbnOo6UPmIQHbaZNC4",
         authDomain: "project1-f4f3e.firebaseapp.com",
@@ -165,6 +170,8 @@ $(document).ready(function(){
         $("#artistForm")[0].reset()
 
     });
+
+
    
    
     
