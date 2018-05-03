@@ -24,6 +24,7 @@
 <body>
 
     <div class="nav-section">
+<<<<<<< HEAD
         <nav>
             <ul>
                 <li>
@@ -38,6 +39,22 @@
             </ul>
         </nav>
     </div>
+=======
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                    <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+                    </li>
+                    <li>
+                    <button onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Signup</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+>>>>>>> Karinabranch
 
 
     <div class="container">
@@ -53,64 +70,55 @@
         </div>
     </div>
 
-    <!--Login Page-->
-    <div id="id01" class="modal">
+<!--Login Page-->
+<div id="login" class="modal">
+  
+  <form class="modal-content animate" action="sitepage.html">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+       <img src="images/background image.jpg" alt="Avatar" class="avatar">
+    </div>
 
-        <form class="modal-content animate" action="/action_page.php">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="./assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
-            </div>
+    <div class="container">
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="login-email"required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="login-psw" required>
+          
 
-            <div class="container">
-                <label for="uname">
-                    <b>Email</b>
-                </label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+      <button type="submit" id="loginbutton">Login</button>
+        
+    </div>
 
-                <label for="psw">
-                    <b>Password</b>
-                </label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit" class="btn btn-success">Login</button>
-
-            </div>
-
-            <div class="container">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            </div>
-        </form>
+    <div class="container" >
+      <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
 
 
-    <!--Signup page-->
-    <div id="id02" class="modal">
-
-        <form class="modal-content animate" action="/action_page.php">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src= "./assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
-            </div>
-            
-            <div class="container">
-                <label for="uname">
-                    <b>email</b>
-                </label>
-                <input type="text" placeholder="Enter Email" name="email" required>
-
-                <label for="psw">
-                    <b>Password</b>
-                </label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit" class="btn btn-success">Sign Up</button>
-
-            </div>
-
-            <div class="container">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            </div>
+<!--Signup page-->
+<div id="signup" class="modal">
+  
+        <form class="modal-content animate" action="sitepage">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="images/background image.jpg" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="signup-email"required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="signup-psw" required>
+              
+            <button type="submit" id="signupbutton">Signup</button>
+           
+          </div>
+      
+          <div class="container">
+            <button type="button" onclick="document.getElementById('signup').style.display='none'" class="cancelbtn">Cancel</button>
+          </div>
         </form>
     </div>
 
