@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 /*neon h1*/
-/* h1 {
+h1 {
     font-family: 'Black Han Sans', sans-serif;
     font-size: 60px;
     font-style: bold;
@@ -23,7 +23,7 @@ h1:after {
     padding: 0 20px;
     z-index: -1;
     color: #ff005b;
-}  */
+}
 
 
 .jain-container .navbar {
