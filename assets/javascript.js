@@ -77,7 +77,7 @@ var config = {
         var email = '';
         var password = '';
     
-        var email = $("#log-email").val().trim();
+        var email = $("#login-email").val().trim();
         var password = $("#login-psw").val().trim();
         
         console.log(email);
