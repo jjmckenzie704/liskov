@@ -104,7 +104,7 @@ $(document).ready(function(){
 
         
         $.ajax({
-            url : "http://api.musixmatch.com/ws/1.1/track.search",
+            url : "https://api.musixmatch.com/ws/1.1/track.search",
                 
 
             data:{
@@ -126,7 +126,7 @@ $(document).ready(function(){
             var title = data.message.body.track_list[0].track.track_name;
     
             $.ajax({
-                url: "http://api.musixmatch.com/ws/1.1/track.lyrics.get?",
+                url: "https://api.musixmatch.com/ws/1.1/track.lyrics.get?",
                 data:{
                     apikey: "fec873930376f5f5c372618b84d70381",
                     track_id: trackId,
@@ -149,7 +149,7 @@ $(document).ready(function(){
             })
         });
       $.ajax({
-          url: "http://ws.audioscrobbler.com/2.0/",
+          url: "https://ws.audioscrobbler.com/2.0/",
           data:{
               method: "artist.getinfo",
               api_key: "6b6d7e9814cf2cb428f0a568b1fa3659",
