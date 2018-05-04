@@ -25,6 +25,11 @@ h1:after {
     color: #ff005b;
 }*/
 
+.img-responsive {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
 
 .jain-container .navbar {
     position: absolute;
