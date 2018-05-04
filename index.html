@@ -17,27 +17,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <!--header font-->
     <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
-        <!--GoogleFonts-->
-        <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <!--GoogleFonts-->
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="nav-section">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
                     <button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
-                    </li>
-                    <li>
+                </li>
+                <li>
                     <button onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Signup</button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
 
     <div class="container">
@@ -46,62 +46,64 @@
                 <div class="canvas-interactive-wrapper">
                     <canvas id="canvas-interactive"></canvas>
                     <div class="cta-wrapper">
-                        <a href="#default-state" id="default-state-cta" class="active">My Jukebox</a>
+                        <a href="#default-state" id="default-state-cta" class="active">My Modern Jukebox</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!--Login Page-->
-<div id="login" class="modal">
-  
-  <form class="modal-content animate" action="sitepage.html">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-       <img src="assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
+    <!--Login Page-->
+    <div id="login" class="modal">
+
+        <form class="modal-content animate" action="sitepage.html">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="email">
+                    <b>Email</b>
+                </label>
+                <input type="text" placeholder="Enter Email" name="email" id="login-email" required>
+
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="psw" id="login-psw" required>
+
+
+                <button type="submit" id="loginbutton">Login</button>
+
+            </div>
+        </form>
     </div>
 
-    <div class="container">
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="login-email"required>
-  
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="login-psw" required>
-          
 
-      <button type="submit" id="loginbutton">Login</button>
-        
-    </div>
+    <!--Signup page-->
+    <div id="signup" class="modal">
 
-    <div class="container" >
-  
-    </div>
+        <form class="modal-content animate" action="sitepage.html">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
+            </div>
 
+            <div class="container">
+                <label for="email">
+                    <b>Email</b>
+                </label>
+                <input type="text" placeholder="Enter Email" name="email" id="signup-email" required>
 
-<!--Signup page-->
-<div id="signup" class="modal">
-  
-        <form class="modal-content animate" action="sitepage">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
-          </div>
-      
-          <div class="container">
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" id="signup-email"required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" id="signup-psw" required>
-              
-            <button type="submit" id="signupbutton">Signup</button>
-           
-          </div>
-      
-          <div class="container">
- 
-          </div>
+                <label for="psw">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="psw" id="signup-psw" required>
+
+                <button type="submit" id="signupbutton">Signup</button>
+
+            </div>
         </form>
     </div>
 

@@ -25,26 +25,16 @@ var granimInstance = new Granim({
   });
   //GAMIN ENDS//
   
-  // Nav Bar //
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  
-  
   // Get the modal
-  var modal = document.getElementById('id01');
-  
-  // When the user clicks anywhere outside of the modal, close it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  }
-  
+var modal = document.getElementById('modal');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
   
   // Initialize Firebase
   var config = {
@@ -65,4 +55,49 @@ var granimInstance = new Granim({
       console.log(snapshot.val());
   })
   
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
+
+  $("#signupbutton").on("click", function(event){
+    event.preventDefault();
+
+    var email = '';
+    var password = '';
+
+    var email = $("#signup-email").val().trim();
+    var password = $("#signup-psw").val().trim();
+   
+    console.log(email);
+    console.log(password);
+
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+          errorCode = error.code;
+          errorMessage = error.message;
+        });
+        
+    });    
+
+    $("#loginbutton").on("click", function(event){
+        event.preventDefault();
     
+        var email = '';
+        var password = '';
+    
+        var email = $("#login-email").val().trim();
+        var password = $("#login-psw").val().trim();
+        
+        console.log(email);
+        console.log(password);  
+
+        //log in 
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(email)
+        });
+    
+    });
+
+
+
