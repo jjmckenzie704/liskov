@@ -1,5 +1,5 @@
 ## Team Liskov Project
-My Jukebox! Interactive site that allows you to listen to watch videos, see lyrics, and discover your favorite artist. 
+My Modern Jukebox! Interactive site that allows you to listen to watch videos, see lyrics, and discover your favorite artist. 
 
 ## Site Navigation
 Sign Up and Log In on our colorful landing page.  
