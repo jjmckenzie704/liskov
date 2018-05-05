@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="iziModal.min.css">
     <!--granim-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/1.1.0/granim.min.js"></script>
-    <!--anime-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <!--header font-->
     <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
     <!--GoogleFonts-->
@@ -24,31 +22,31 @@
 </head>
 
 <body>
-
-    <div class="nav-section">
-        <nav>
-            <ul>
-                <li>
-                    <a class="animated zoomIn" href="index.html">Home</a>
-                </li>
-                <li>
-                    <button class="animated zoomIn" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
-                </li>
-                <li>
-                    <button class="animated zoomIn" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Signup</button>
-                </li>
-            </ul>
-        </nav>
+    <div class="container">
+        <div class="nav-section">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="animated zoomIn" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <button class="animated zoomIn" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
+                    </li>
+                    <li>
+                        <button class="animated zoomIn" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Signup</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="canvas-interactive-wrapper">
                     <canvas id="canvas-interactive"></canvas>
-                    <div class="cta-wrapper">
-                        <a href="#default-state" id="default-state-cta" class="active">My Modern Jukebox</a>
+                    <div class="cta-wrapper" >
+                        <a href="#default-state" id="default-state-cta" class="active" >My Modern Jukebox</a>
                     </div>
                 </div>
             </div>
@@ -112,8 +110,7 @@
 
     <!-- Call the script -->
     <script src="granim.min.js"></script>
-    <script src="iziModal.min.js" type="text/javascript"></script>
-    <script src="anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"></script>
     <!--jquery!-->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
