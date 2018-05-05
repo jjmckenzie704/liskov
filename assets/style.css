@@ -87,7 +87,7 @@ nav ul li a {
   padding: 40px 60px;
   font-size: 15px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
   color: #323642;
   transition: background-color 0.5s ease;
 }
@@ -123,7 +123,7 @@ nav ul li a:hover {
     width: 100%;
     font-size: 15px;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
     color: #323642;
     transition: background-color 0.5s ease;
     background-color: white;
@@ -217,23 +217,29 @@ nav ul li a:hover {
     to {transform: scale(1)}
   }
   
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-  }
-  @media only screen and (max-width: 768px) {
+   
+  
+  @media only screen and (max-width: 600px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
     }
+  
     #default-state-cta {
-      width: 100px;
-      height: 100px;
+      font-size: 60px;
+      text-align: center;
+      padding-top: 65px;
     }
+
+    nav ul li a ,
+    button {
+      padding: 30px ;
+      display: block;
+      position: relative;
+    }
+   
+    span.psw {
+      display: block;
+      float: none;
+   }
   }

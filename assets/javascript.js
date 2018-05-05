@@ -96,55 +96,6 @@ var config = {
 
 
 
-//   var usersRef = firebase.database().ref("/users");
-
-// var mainDB = firebase.database().ref();
-
-// usersRef.update({
-//     "karina": "password"
-// });
-
-// usersRef.child("mahesh").on("value", function(snapshot) {
-//     console.log(snapshot.val());
-// });
-
-
-//Local Storage 
-
-//store data
-
-// window.onload = function() {
-// if (localStorage) {
-//     document.getElementById("signup").addEventListener('submit', function(){
-//     var username = document.getElementById('susername').value;
-
-//     localStorage.setItem('susername', username);
-//     cosole.log(username);
-//     });
-
-// }
-// }
-
-    //retrieve data 
-
-    // var username = localStorage.getItem('susername');
-    // if (username != "undefined" || username != "null") {
-    //    // document.getElementById('WelcomeMessage').innerHTML =("hello" + username + "!");
-    //     console.log("hello " + username);
-    // }
-    // else {
-       // document.getElementById('Welcome').innerHTML = "hello!"
-    // }
-// localStorage.setItem("username", "");
-
-
-
-
-
-
-
-
-
 
 
 
