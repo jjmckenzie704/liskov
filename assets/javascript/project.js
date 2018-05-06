@@ -246,25 +246,25 @@ $(document).ready(function(){
            }
            
        });
-
+       songs = song.replace(" ","+");
        // Making an ajax call to the Musixmatch api to get the the track id 
        $.ajax({
-           url : "https://api.musixmatch.com/ws/1.1/track.search",
-               
+            url : "https://api.musixmatch.com/ws/1.1/track.search",
+            
 
-           data:{
+            data:{
                apikey: "fec873930376f5f5c372618b84d70381",
-               q: song,
+               q: songs,
                page: 1,
                page_size: 1,
                s_track_rating: "desc",
                format: "jsonp",
                callback: "jsonp_callback" 
            },
-           dataType: "jsonp",
-           jsonpCallback: 'jsonp_callback',
-           contentType: 'application/json',
-           method: "GET"
+            dataType: "jsonp",
+            jsonpCallback: 'jsonp_callback',
+            contentType: 'application/json',
+            method: "GET"
        })
        .then(function(data){
            var trackId = data.message.body.track_list[0].track.track_id;
@@ -289,11 +289,14 @@ $(document).ready(function(){
                var lyricsDiv = $("<div>");
                var hLyrics = $("<h2>").text(title);
                var pLyrics = $("<p>").text(lyrics);
+               if(title === song){
                lyricsDiv.append(hLyrics);
                lyricsDiv.append(pLyrics);
                $("#lyrics").append(lyricsDiv);
+               }
            })
        });
+       artists = artist.replace(" ", "+");
    // Making an ajax call to the last.fm api to obtain the artist bio
      $.ajax({
          url: "https://ws.audioscrobbler.com/2.0/",
@@ -301,7 +304,7 @@ $(document).ready(function(){
              method: "artist.getinfo",
              api_key: "6b6d7e9814cf2cb428f0a568b1fa3659",
              format: "json",
-             artist: artist,
+             artist: artists,
              lang: "en",
            },
        })
