@@ -296,7 +296,7 @@ $(document).ready(function(){
                }
            })
        });
-       artists = artist.replace(" ", "+");
+       
    // Making an ajax call to the last.fm api to obtain the artist bio
      $.ajax({
          url: "https://ws.audioscrobbler.com/2.0/",
@@ -304,7 +304,7 @@ $(document).ready(function(){
              method: "artist.getinfo",
              api_key: "6b6d7e9814cf2cb428f0a568b1fa3659",
              format: "json",
-             artist: artists,
+             artist: artist,
              lang: "en",
            },
        })
