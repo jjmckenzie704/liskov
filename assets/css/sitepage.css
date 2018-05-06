@@ -124,6 +124,16 @@ nav ul {
         top:-3em; 
     }
 }
+#panelBody{
+    color: black;
+    font-size: 15px;
 
-
-
+}
+#panelHeading{
+    font-size: 20px;
+}
+.favBody{
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}   

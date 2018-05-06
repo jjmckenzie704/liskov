@@ -69,7 +69,7 @@ body {
 
 .nav-section {
   width: 100%;
-  padding: 0; 
+  padding: 10% 0; 
   padding: 0;
 }
 
@@ -90,7 +90,7 @@ nav ul li a {
   padding: 40px 60px;
   font-size: 15px;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300;
   color: #323642;
   transition: background-color 0.5s ease;
 }
@@ -117,25 +117,27 @@ nav ul li a:hover {
   }
   
   /* Set a style for login, signup, and cancel buttons */
-  button {
+  .button {
+    background-color: white;
     color: black;
-    padding: 40px 60px;
+    padding: 40px;
     margin: 0;
     border: none;
+    outline: none;
     cursor: pointer;
     width: 100%;
     font-size: 15px;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
     color: #323642;
     transition: background-color 0.5s ease;
-    background-color: white;
   }
   
   button:hover {
     opacity: 0.8;
     background-color: rgba(255, 255, 255, 0.3);
   }
+ 
   
   /* Extra styles for the cancel button */
   .cancelbtn {
@@ -147,8 +149,6 @@ nav ul li a:hover {
   /* Center the image and position the close button */
   .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
 
   }
   
@@ -165,44 +165,16 @@ nav ul li a:hover {
     padding-top: 16px;
   }
   
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: white;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid black;
-    width: 100%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #534e4e;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    cursor: pointer;
-  }
+#close{
+  color: #534e4e;
+  font-size: 35px;
+  font-weight: bold
+
+}
+.btn{
+  padding: 20px;
+  font-size: 20px;
+}
   
   /* Add Zoom Animation */
   .animate {
@@ -220,29 +192,14 @@ nav ul li a:hover {
     to {transform: scale(1)}
   }
   
-   
-  
-  @media only screen and (max-width: 600px) {
-    /* For mobile phones: */
-    [class*="col-"] {
-        width: 100%;
-    }
-  
-    #default-state-cta {
-      font-size: 60px;
-      text-align: center;
-      padding-top: 65px;
-    }
-
-    nav ul li a ,
-    button {
-      padding: 30px ;
-      display: block;
-      position: relative;
-    }
-   
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
     span.psw {
-      display: block;
-      float: none;
-   }
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
   }
+  /*Karinabranch CSS Ends*/

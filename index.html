@@ -3,50 +3,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>My Modern Jukebox</title>
+    <title>My Jukebox</title>
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Bootstrap JS CDN-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--CSS-->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!--iziModal-->
     <link rel="stylesheet" href="iziModal.min.css">
     <!--granim-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/1.1.0/granim.min.js"></script>
+    <!--anime-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <!--header font-->
     <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
     <!--GoogleFonts-->
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
     <!--animate.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  
 </head>
 
 <body>
-    <div class="container">
-        <div class="nav-section">
-            <nav>
-                <ul>
-                    <li>
-                        <a class="animated zoomIn" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <button class="animated zoomIn" onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</button>
-                    </li>
-                    <li>
-                        <button class="animated zoomIn" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Signup</button>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+
+    <div class="nav-section">
+        <nav>
+            <ul>
+                <li>
+                    <a class="animated zoomIn" href="index.html">Home</a>
+                </li>
+                <li>
+                    <button type = "button" class="animated zoomIn button" id = "logIn" data-toggle = "modal" data-target = "#login" style="width:auto;">Login</button>
+                </li>
+                <li>
+                    <button type = "button" class="animated zoomIn button"  id = "signUp" data-toggle = "modal" data-target = "#signup" style="width:auto;">Signup</button>
+                </li>
+                <li>
+                    <button type = "button" class = "animated zoomIn hidden button" id = "logout">Log Out</button>
+                </li>
+                <li>
+                    <a class="animated zoomIn hidden" id = "main" href="sitepage.html">Main Page</a>
+                </li>
+            </ul>
+        </nav>
     </div>
+
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="canvas-interactive-wrapper">
                     <canvas id="canvas-interactive"></canvas>
-                    <div class="cta-wrapper" >
-                        <a href="#default-state" id="default-state-cta" class="active" >My Modern Jukebox</a>
+                    <div class="cta-wrapper">
+                        <a href="#default-state" id="default-state-cta" class="active">My Modern Jukebox</a>
                     </div>
                 </div>
             </div>
@@ -54,71 +67,105 @@
     </div>
 
     <!--Login Page-->
-    <div id="login" class="modal">
+    <div class = "modal fade" id = "login">
+        <div class = "modal-dialog">
+            <div class = "modal-content animate">
+                <div class = "modal-header">
+                    <button type = "button" class = "close" data-dismiss = "modal" id = "close">&times;</button>
+                    <div class = "imgcontainer">
+                        <img src="assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
+                    </div>
+                    
+                </div>
 
-        <form class="modal-content animate" action="sitepage.html">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
+                <div class="modal-body">
+                    <form role = "form" id = "modalForm1">
+                        <div class = "form-group">
+                            <label for="email">
+                                <b>Email</b>
+                            </label>
+                            <input type="text" placeholder="Enter Email" name="email" id="login-email" required>
+                        </div>
+                        <div class = "form-group">
+                            <label for="psw">
+                                <b>Password</b>
+                            </label>
+                            <input type="password" placeholder="Enter Password" name="psw" id="login-psw" required>
+                        </div>
+                        <div class = "modal-footer">
+                            <button class = "btn btn-primary btn-block" type="submit" id="loginbutton">Login</button>
+                        </div>
+                
+                    </form>
+                </div>
             </div>
-
-            <div class="container">
-                <label for="email">
-                    <b>Email</b>
-                </label>
-                <input type="text" placeholder="Enter Email" name="email" id="login-email" required>
-
-                <label for="psw">
-                    <b>Password</b>
-                </label>
-                <input type="password" placeholder="Enter Password" name="psw" id="login-psw" required>
-
-
-                <button type="submit" id="loginbutton">Login</button>
-
-            </div>
-        </form>
+        </div>
     </div>
-
 
     <!--Signup page-->
-    <div id="signup" class="modal">
-
-        <form class="modal-content animate" action="sitepage.html">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
+    <div class = "modal animate" id = "signup">
+            <div class = "modal-dialog">
+                <div class = "modal-content">
+                    <div class = "modal-header">
+                        <button type = "button" class = "close" data-dismiss = "modal" id = "close">&times;</button>
+                        <div class = "imgcontainer">
+                            <img src="assets/images/jukeboxlogo.png" alt="Avatar" class="avatar">
+                        </div>
+                        
+                    </div>
+    
+                    <div class="modal-body">
+                        <form role = "form" id = "modalForm2">
+                            <div class = "form-group">
+                                <label for="email">
+                                    <b>Email</b>
+                                </label>
+                                <input type="text" placeholder="Enter Email" name="email" id="signup-email" required>
+                            </div>
+                            <div class = "form-group">
+                                <label for="psw">
+                                    <b>Password</b>
+                                </label>
+                                <input type="password" placeholder="Enter Password" name="psw" id="signup-psw" required>
+                            </div>
+                            <div class = "modal-footer">
+                                <button class = "btn btn-primary btn-block" type="submit" id="signupbutton">Signup</button>
+                            </div>
+                    
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            <div class="container">
-                <label for="email">
-                    <b>Email</b>
-                </label>
-                <input type="text" placeholder="Enter Email" name="email" id="signup-email" required>
-
-                <label for="psw">
-                    <b>Password</b>
-                </label>
-                <input type="password" placeholder="Enter Password" name="psw" id="signup-psw" required>
-
-                <button type="submit" id="signupbutton">Signup</button>
-
+        </div>
+        <!-- Modal that displays any error messages -->
+        <div class = "modal" id = "errorMessage">
+            <div class = "modal-dialog">
+                <div class ="modal-content">
+                    <div class = "modal-header">
+                        <h2 class = "modal-title text-center" id = "header"></h2>
+                        <button type = "button" class = "close" data-dismiss = "modal">&times;</button>
+                    </div>
+                    <div class = "modal-body">
+                        <p class = "text-center" id = "message"></p>
+                    </div>
+                    <div class = "modal-footer">
+                        <button type = "button" class = "btn btn-primary btn-block" id = "exit">OK</button>
+                    </div>
+                </div>
             </div>
-        </form>
-    </div>
-
-
+        </div>
     <!-- Call the script -->
     <script src="granim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"></script>
-    <!--jquery!-->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="iziModal.min.js" type="text/javascript"></script>
+    <script src="anime.min.js"></script>
+   
     <!--JavaScript-->
-    <script src="assets/javascript/javascript.js"></script>
+    <script src = "assets/javascript/javascript.js"></script>
+    <script src="assets/javascript/project.js"></script>
+    
     <!--firebase-->
     <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-
+    
 </body>
 
 </html>
