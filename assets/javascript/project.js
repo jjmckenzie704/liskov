@@ -215,7 +215,7 @@ $(document).ready(function(){
                type: "video",
                q: querys,
                order: "viewCount",
-               maxResults: 5
+               maxResults: 10
            },
            method: "GET"
        })
@@ -227,13 +227,15 @@ $(document).ready(function(){
            for(var i = 0; i < results.length; i ++){
                console.log(results);
                 var title = results[i].snippet.title
+                var titleCap = title.toUpperCase();
+                var songCap = song.toUpperCase();
                 console.log(title)
                 var titles =  $("<h2>").text(title);
                 var videoId = results[i].id.videoId;
                 var videoDiv = $("<div>");
                 var videoFrame = $("<iframe>");
                 var source = "https://www.youtube.com/embed/" + videoId;
-                if(title.includes(song) && count === 0){
+                if(titleCap.includes(songCap) && count === 0){
                     videoFrame.attr("src", source).attr("frameborder", 0).attr("width", "600px").attr("height", "400px").attr("allowfullscreen", " ").attr("id", "iframe");
                     videoDiv.append(titles, videoFrame);
                     $("#videos").append(videoDiv);
