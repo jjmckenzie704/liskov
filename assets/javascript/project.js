@@ -287,15 +287,17 @@ $(document).ready(function(){
            })
            // Taking the info from the ajax call and appending it to the page with the title and the lyrics
            .then(function(data){
-               var lyrics = data.message.body.lyrics.lyrics_body;
-               var lyricsDiv = $("<div>");
-               var hLyrics = $("<h2>").text(title);
-               var pLyrics = $("<p>").text(lyrics);
-               if(title === song){
-               lyricsDiv.append(hLyrics);
-               lyricsDiv.append(pLyrics);
-               $("#lyrics").append(lyricsDiv);
-               }
+                var capTitle = title.toUpperCase();
+                var capSong = song.toUpperCase();
+                var lyrics = data.message.body.lyrics.lyrics_body;
+                var lyricsDiv = $("<div>");
+                var hLyrics = $("<h2>").text(title);
+                var pLyrics = $("<p>").text(lyrics);
+                if(capTitle === capSong){
+                lyricsDiv.append(hLyrics);
+                lyricsDiv.append(pLyrics);
+                $("#lyrics").append(lyricsDiv);
+                }
            })
        });
        
