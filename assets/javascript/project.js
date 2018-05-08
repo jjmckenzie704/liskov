@@ -44,7 +44,7 @@ $(document).ready(function () {
         setTimeout(function(){
         var user = firebase.auth().currentUser;
         
-        if (user != "null") {
+        if (user != null) {
             $("#modalForm1")[0].reset();
             $("#login").modal("hide");
             login();
