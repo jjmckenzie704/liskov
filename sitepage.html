@@ -47,13 +47,13 @@
                                     <a href="" data-toggle="modal" data-target="#artist-search">Artist Search</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="$('#carousel').carousel(0)";>Video</a>
+                                    <a href="#" onclick="$('#carousel').carousel(0)" ;>Video</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="$('#carousel').carousel(1)";>Lyrics &amp; Bio</a>
+                                    <a href="#" onclick="$('#carousel').carousel(1)" ;>Lyrics &amp; Bio</a>
                                 </li>
                                 <li>
-                                    <a href = "index.html" class = "hidden" id = "logout">Log Out</a>
+                                    <a href="index.html" class="hidden" id="logout">Log Out</a>
                                 </li>
                             </ul>
                         </div>
@@ -68,34 +68,37 @@
                 <div class="item active">
                     <img class="img-responsive" id="box1" src="assets/images/bluegradient.png">
                     <div class="carousel-caption">
-                        <div class = "row">
-                            <div class = "col-md-12" id = "favorites">
-                                <div class="panel panel-primary">
-                                    <div class="panel-heading" id = "panelHeading">Favorites</div>
-                                    <div class="panel-body" id = "panelBody">
-                                        <table class = "table" id = "favoritesTable">
-                                            <thead class = "text-center">
-                                                <tr>
-                                                    <th>Artist</th>
-                                                    <th>Song</th>
-                                                </tr>
-                                            </thead>    
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div id="videos"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" id="favorites">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading" id="panelHeading">Favorites</div>
+                                        <div class="panel-body" id="panelBody">
+                                            <table class="table" id="favoritesTable">
+                                                <thead class="text-center">
+                                                    <tr>
+                                                        <th>Artist</th>
+                                                        <th>Song</th>
+                                                    </tr>
+                                                </thead>
                                                 <tbody>
-                
-                                                </tbody>    
+
+                                                </tbody>
                                             </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-
-                            <div class="col-md-12">
-                                <div id = "videos"></div>
-                            </div>
-                        </div>
                     </div>
+
                 </div>
+
                 <div class="item">
                     <img class="img-responsive" id="box2" src="assets/Images/musicmind.png">
                     <div class="carousel-lyrics-page">
@@ -140,7 +143,7 @@
                     <h2 class="modal-title">Artist and Song Search</h2>
                 </div>
                 <div class="modal-body">
-                    <form role="form" id = "artistForm">
+                    <form role="form" id="artistForm">
                         <div class="form-group">
 
                             <input type="text" class="form-control" placeholder="Artist" id="artist">
@@ -160,18 +163,18 @@
         </div>
     </div>
     <!-- Modal that displays any error messages -->
-    <div class = "modal fade" id = "errorMessage">
-        <div class = "modal-dialog">
-            <div class ="modal-content">
-                <div class = "modal-header">
-                    <button type = "button" class = "close" data-dismiss = "modal">&times;</button>
-                    <h2 class = "modal-title text-center" id = "header"></h2>
+    <div class="modal fade" id="errorMessage">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title text-center" id="header"></h2>
                 </div>
-                <div class = "modal-body">
-                    <p class = "text-center" id = "message"></p>
+                <div class="modal-body">
+                    <p class="text-center" id="message"></p>
                 </div>
-                <div class = "modal-footer">
-                    <button type = "button" class = "btn btn-primary btn-block" id = "exit">OK</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-block" id="exit">OK</button>
                 </div>
             </div>
         </div>
