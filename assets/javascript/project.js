@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     var database = firebase.database();
 
-    var expr = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var expr = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     //  When the login button is clicked allows user to login into the app with email and password
     $("#loginbutton").on("click", function (event) {
         event.preventDefault();
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
         var email = $("#signup-email").val().trim();
         var password = $("#signup-psw").val().trim();
-        if (email === "" || expr.test(email)) {
+        if (email === "" || !(expr.test(email))) {
             $("#header").text("Error");
             $("#message").text("Please enter a valid Email address");
             $("#errorMessage").modal("show");
