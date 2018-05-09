@@ -20,7 +20,8 @@ $(document).ready(function () {
     // Creating a variable for the firebase database
 
     var database = firebase.database();
-    var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
+    var expr = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     //  When the login button is clicked allows user to login into the app with email and password
     $("#loginbutton").on("click", function (event) {
         event.preventDefault();
@@ -65,7 +66,7 @@ $(document).ready(function () {
 
         var email = $("#signup-email").val().trim();
         var password = $("#signup-psw").val().trim();
-        if (email === "" || expr.text(email)) {
+        if (email === "" || expr.test(email)) {
             $("#header").text("Error");
             $("#message").text("Please enter a valid Email address");
             $("#errorMessage").modal("show");
@@ -76,6 +77,7 @@ $(document).ready(function () {
             $("#errorMessage").modal("show");
         }
         else {
+
             firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
@@ -96,7 +98,9 @@ $(document).ready(function () {
                     setTimeout(function () { location.replace("sitepage.html") }, (1500));
                 }
             }, (500));
-        };
+
+
+        }
     });
     // Any time there is an auth state change hides and shows buttons and changes the userId for saving content
     firebase.auth().onAuthStateChanged(function (user) {
