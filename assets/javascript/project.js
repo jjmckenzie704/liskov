@@ -41,14 +41,15 @@ $(document).ready(function () {
             $("#errorMessage").modal("show");
 
         });
-        setTimeout(function(){
-        var user = firebase.auth().currentUser;
-        
-        if (user != null) {
-            $("#modalForm1")[0].reset();
-            $("#login").modal("hide");
-            login();
-        }},(500));
+        setTimeout(function () {
+            var user = firebase.auth().currentUser;
+
+            if (user != null) {
+                $("#modalForm1")[0].reset();
+                $("#login").modal("hide");
+                login();
+            }
+        }, (500));
     });
     function login() {
         $("#header").text("Logged In");
@@ -64,16 +65,6 @@ $(document).ready(function () {
 
         var email = $("#signup-email").val().trim();
         var password = $("#signup-psw").val().trim();
-
-
-        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            $("#header").text("Error");
-            $("#message").text(errorMessage);
-            $("#errorMessage").modal("show");
-
-        });
         if (email === "" || expr.text(email)) {
             $("#header").text("Error");
             $("#message").text("Please enter a valid Email address");
@@ -85,14 +76,27 @@ $(document).ready(function () {
             $("#errorMessage").modal("show");
         }
         else {
-            $("#modalForm2")[0].reset();
-            $("#signup").modal("hide");
-            $("#header").text("Signed Up");
-            $("#message").text("You have Successfully Signed up");
-            $("#errorMessage").modal("show");
-            setTimeout(function () { location.replace("sitepage.html") }, (1500));
+            firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                $("#header").text("Error");
+                $("#message").text(errorMessage);
+                $("#errorMessage").modal("show");
 
-        }
+            });
+            setTimeout(function () {
+                var user = firebase.auth().currentUser;
+
+                if (user != null) {
+                    $("#modalForm2")[0].reset();
+                    $("#signup").modal("hide");
+                    $("#header").text("Signed Up");
+                    $("#message").text("You have Successfully Signed up");
+                    $("#errorMessage").modal("show");
+                    setTimeout(function () { location.replace("sitepage.html") }, (1500));
+                }
+            }, (500));
+        };
     });
     // Any time there is an auth state change hides and shows buttons and changes the userId for saving content
     firebase.auth().onAuthStateChanged(function (user) {
