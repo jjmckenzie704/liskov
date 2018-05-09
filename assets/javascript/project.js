@@ -56,7 +56,7 @@ $(document).ready(function () {
         $("#header").text("Logged In");
         $("#message").text("You have Successfully Signed In");
         $("#errorMessage").modal("show");
-        setTimeout(function () { location.replace("sitepage.html") }, (1500));
+        setTimeout(function () { location.replace("sitepage.html") }, (2500));
     };
     // Allows user to create an account with a email and password to login into the app
     $("#signupbutton").on("click", function (event) {
@@ -95,7 +95,7 @@ $(document).ready(function () {
                     $("#header").text("Signed Up");
                     $("#message").text("You have Successfully Signed up");
                     $("#errorMessage").modal("show");
-                    setTimeout(function () { location.replace("sitepage.html") }, (1500));
+                    setTimeout(function () { location.replace("sitepage.html") }, (2500));
                 }
             }, (500));
 
